@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }html,body{
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          background-image: url(https://www.moneypatrol.com/moneytalk/wp-content/uploads/2023/06/budget445.png);
+          background-position: bottom;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+    
+        .nav{
+          height: 80px;
+          width: 100%;
+          background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border-bottom: 3px solid #2B468A;
+        }
+        .nav a{
+          color: black;
+          font-size: 28px;
+          text-decoration: none;
+          transition: all ease 0.5s;
+        }
+        .nav a:hover{
+          color: white;
+          cursor: pointer;
+          font-size: 30px;
+    
+        } 
+        h2{
+          text-align: center;
+          margin-top: 25px;
+          font-size: 50px;
+          font-weight: 500;
+          color: #e56a1d;
+        }
+        form{
+      height: 80px;
+      width: 550px;
+      background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+      margin-top: 1%;
+      margin-left: 33%;
+      border-radius: 20px;
+      border: 5px solid #2B468A;
+    }
+    form input{
+      margin-left: 3%;
+      padding: 5px 10px;
+    }
+    form button{
+     padding: 8px 20px;
+      margin-left: 4%;
+      /* margin-top: 10%; */
+      border-radius: 50px;
+      border: none;
+      background-color: white;
+    }
+    button:hover{
+      background-color: coral;
+      color: white;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    select{
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 12px 20px;
+      border-radius: 50px;
+      border: none;
+      background-color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/profile">Home</a> 
+        <a href="/add-expense">Add Expense</a>
+        <a href="/filter">Filter</a>
+        <a href="/signout">Signout</a>
+      </div>
+    <!-- <h1>this is filtering Page</h1> -->
+    <h2 >Area to filter your expenses</h2>
+    <form action="/filter">
+      <select name="key">
+        <option value="amount">Amount</option>
+        <option value="remark">Remark</option>
+        <option value="category">Category</option>
+        <option value="paymentmode">PaymentMode</option>
+      </select>
+      <input
+        type="text"
+        name="value"
+        placeholder="Enter term to search with.."
+      />
+      <button>Filter</button>
+    </form>
+    <!-- <hr /> -->
+    <% expenses.forEach(function(expense, i) { %>
+    <div>
+      <h1>Amount: <%= expense.amount %></h1>
+      <h1>Remark: <%= expense.remark %></h1>
+      <h1>Category: <%= expense.category %></h1>
+      <h1>Payment Mode: <%= expense.paymentmode %></h1>
+      <hr />
+    </div>
+    <% }) %>
+</body>
+</html>

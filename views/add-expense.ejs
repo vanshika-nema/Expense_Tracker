@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }html,body{
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          background-image: url(https://media.licdn.com/dms/image/D5612AQGplp7JKG6Iiw/article-cover_image-shrink_720_1280/0/1673950361361?e=2147483647&v=beta&t=NxzErCoXqQ-xwkHJZZkKGKYNA21hJh3oNMUJzNKQr9M);
+          background-position: bottom;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+    
+        nav{
+          height: 80px;
+          width: 100%;
+          background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border-bottom: 3px solid #2B468A;
+        }
+        nav a{
+          color: black;
+          font-size: 28px;
+          text-decoration: none;
+          transition: all ease 0.5s;
+        }
+        nav a:hover{
+          color: white;
+          cursor: pointer;
+          font-size: 30px;
+    
+        } 
+    
+        h1{ 
+          text-align: center;
+          margin-top: 15px;
+          font-size: 50px;
+          font-weight: 500;
+          color: #FAC344;
+        }
+    form{
+      height: 400px;
+      width: 300px;
+      background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+      margin-top: 6%;
+      margin-left: 43%;
+      border-radius: 20px;
+      border: 5px solid #2B468A;
+    }
+    form input{
+        margin-top: 5%;
+        text-align: center;
+     margin-left: 15%;
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: none;
+    }
+    form button{
+     
+      padding: 12px 18px;
+      margin-left: 80px;
+      margin-top: 10%;
+      border-radius: 50px;
+      border: none;
+      background-color: white;
+    }
+    button:hover{
+      background-color: coral;
+      color: white;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    b{
+        margin-left: 5%;
+        font-size: 18px;
+    }
+    select{
+        margin-left: 3%;
+        margin-top: 10%;
+        padding: 12px 20px;
+      border-radius: 50px;
+      border: none;
+      background-color: white;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/profile">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="/signout">SIGNOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </nav>
+    <h1>Enter details to add your expenses</h1>
+    <form action="/add-expense" method="post">
+        <input type="text" name="amount" placeholder="Enter Amount.."><br><br>
+        <input type="text" name="remark" placeholder="Enter Remark.."><br><br>
+        <input type="text" name="category" placeholder="Enter Category.."><br><br>
+         <b>Paymentmode</b>: <select name="paymentmode" >
+            <option value="cash">Cash</option>
+            <option value="upi">UPI</option>
+            <option value="cheque">CHEQUE</option>
+            
+        </select><br><br>
+        <button>Add Expense</button>
+    </form>
+</body>
+</html>

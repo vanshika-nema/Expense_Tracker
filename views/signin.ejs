@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin_page</title>
+    <style>
+      *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }html,body{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: url(https://assets-global.website-files.com/62a991fe7443d71b2ed1afb0/637de9eca321ea38f36c9d08_10%20Best%20Business%20Expense%20Tracker%20Apps.webp);
+      background-position:  center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .nav{
+      height: 80px;
+      width: 100%;
+      background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 3px solid #2B468A;
+    }
+    .nav a{
+      color: black;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all ease 0.5s;
+    }
+    .nav a:hover{
+      color: white;
+      cursor: pointer;
+      font-size: 30px;
+    }
+    .signin{
+      height: 300px;
+      width: 300px;
+      background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8%;
+      margin-left: 43%;
+      border-radius: 20px;
+      border: 5px solid #2B468A;
+    }
+    .signin input{
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: none;
+    }
+    .signin button{
+      padding: 12px 18px;
+      margin-left: 50px;
+      margin-top: 20px;
+      border-radius: 50px;
+      border: none;
+      background-color: white;
+    }
+    button:hover{
+      background-color: coral;
+      color: white;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    h1{
+      text-align: center;
+      font-size: 50px;
+      color: black;
+    }
+    </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/signin">Signin</a>
+    <a href="/signup">Signup</a>
+    <!-- <a href="/forget">Forget_password</a> -->
+   
+  </div>
+  <h1>SIGNIN PAGE</h1>
+
+  <div class="signin">
+    
+  <form action="/signin" method="post">
+    <input type="text" placeholder="Username" name="username"> <br><br>
+    <!-- <input type="email" placeholder="Email" name="email"><br><br> -->
+    <input type="password" placeholder="Password" name="password"><br><br>
+    <button>Signin</button>
+  </div>
+
+  </form>
+    
+</body>
+</html>

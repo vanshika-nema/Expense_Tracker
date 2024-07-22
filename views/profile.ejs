@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile_page</title>
+
+    <style>
+     *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }html,body{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: url(https://i0.wp.com/www.sutisoft.com/blog/wp-content/uploads/2021/12/Automated-Expense-Management-Platform.jpg?fit=640%2C512&ssl=1);
+      background-position:  bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+      .nav{
+      height: 80px;
+      width: 100%;
+      background: linear-gradient(rgb(140, 140, 234),rgb(183, 179, 179));
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 3px solid black;
+    }
+    .nav a{
+      color: black;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all ease 0.5s;
+    }
+    .nav a:hover{
+      color: white;
+      cursor: pointer;
+      font-size: 30px;
+    }
+   
+    </style>
+</head>
+<body>
+        
+<div class="nav">
+    <a href="/profile">Home</a> 
+    <a href="/add-expense">Add Expense</a>
+    <a href="/filter">Filter</a>
+    <a href="/signout">Signout</a>
+  </div>
+  <h1 style="text-align: center;">PROFILE PAGE</h1>
+  
+  <h2>
+    <b style=" color: orangered; font-size: 30px; margin-left: 42%; border: 1px solid black; background-color: white;">Total Expenses:<%= expenses.reduce((ac,cv) => ac+cv.amount, 0)%></b>
+  </h2> 
+  <hr />
+ 
+  
+
+  <% expenses.forEach(function(expense, i) { %>
+  <div>
+    <h1>Amount: <%= expense.amount %></h1>
+    <h1>Remark: <%= expense.remark %></h1>
+    <h1>Category: <%= expense.category %></h1>
+    <h1>Payment Mode: <%= expense.paymentmode %></h1>
+    <hr />
+  </div>
+  <% }) %>
+  </div>
+</body>
+</html>
