@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
+const uri = "mongodb+srv://vanshikanema2003:9bPamsUMDMHXahFY@cluster0.hjehuu4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose
-    .connect("mongodb://127.0.0.1:27017/expen")
+    .connect(uri)
     .then(() => console.log("db connected!"))
     .catch((err) => console.log(err.message));
